@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }} Nous Contacter{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="about" %}
+{% endblock %}
+
+{% block container %}
+
+<div id="sec2" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Contact</h2>
+            <form role="form" action=" " method="post">
+                 {% csrf_token %}
+                 {{ form.as_p }}
+               <button type="submit">Submit</button>
+             </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock container %}

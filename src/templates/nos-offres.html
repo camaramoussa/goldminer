@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }} Nos Offres{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="about" %}
+{% endblock %}
+
+{% block container %}
+
+<div id="sec2" class="text-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>{% include "_brandname.html" %}</h1>
+
+        <p class="lead"> Profiter de nos services pour prendre la décision qui vous mettra devant tous vos concurents </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="sec1" class="text-page">
+  <div class="container">
+
+      <div class="col-md-12 text-center">
+        <p class="lead"> Nous vous accompagnons dans vos projets d'analyse et de valorisation de données </p>
+      </div>
+       <div class="row">
+          <div class="col-lg-4 ">
+              <p class="lead text-center"> Nous sommes des développeurs, Data Scientists et Statisticiens</p>
+          </div>
+
+            <div class="col-lg-4">
+          <p class="lead text-center">Nous accompagnons nos clients dans les mutations qui s'annoncent dans le monde du numérique </p>
+            </div>
+
+           <div class="col-lg-4">
+          <p class="lead text-center"> Nous proposons des services innovants qui vont de la stratégie jusqu'à la mise en oeuvre de solutions
+              technologiques</p>
+          </div>
+    </div>
+  </div>
+
+</div>
+
+<div id="sec3" class="text-page">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/9/" alt="profile pic"></div>
+        <h3 class="text-center"> Conseil en Big Data  </h3>
+        <p> </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/2/" alt="profile pic"></div>
+        <h3 class="text-center"> Fouilles de données </h3>
+        <p> </p>
+      </div>
+      <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
+          <h3 class="text-center"> CRM & Data Analytics</h3>
+           <p> </p>
+      </div>
+        <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
+          <h3 class="text-center"> Web Campaigne </h3>
+           <p> </p>
+      </div>
+        <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
+          <h3 class="text-center"> Dashboard and DataViz</h3>
+           <p> </p>
+      </div>
+         <div class="col-lg-4">
+        <div class="text-center"><img class="img-circle centered" src="http://lorempixel.com/128/128/people/1/" alt="profile pic"></div>
+          <h3 class="text-center"> Etudes Statistiques </h3>
+           <p> </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock container %}
+
+
