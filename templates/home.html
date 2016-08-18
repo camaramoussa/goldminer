@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ block.super }}Home{% endblock %}
+
+{% block navbar-left %}
+  {% include "_navbar.html" with active_link="home" %}
+{% endblock %}
+
+{% block navbar-right %}
+  {% if not user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'accounts:login' %}" role="button">Log in</a>
+<a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up</a>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block splash %}
+
+  <div class="jumbotron jumbotron-carousel corporate-jumbo">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>{% include "_brandname.html" %}</h1>
+
+          <p> Find values from your Database with our data scientist team </p>
+          <!-- <a class="btn btn-primary" href="{% url 'accounts:signup' %}" role="button">Sign up for Free!</a> -->
+        </div>
+        <div class="col-md-8 col-sm-8">
+        </div>
+        <div class="col-md-4 col-sm-4">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock splash %}
+
+{% block container %}
+<!-- Benefits of the Django application -->
+<a name="about"></a>
+
+<div id="sec0" class="text-page">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <h2> Conseil en Big Data </h2>
+
+      <p> Transformez vos données en levier de performance, Adopter les bonnes décisions et gagner en compétivité</p>
+
+      <p><a class="btn btn-primary" href="nos-offres" id="sec3" role="button">View details &raquo;</a></p>
+    </div>
+
+    <div class="col-lg-4">
+      <h2>  Digital  Marketing </h2>
+      <p> Anticiper et optimiser vos campagnes de fidélisation et de conquête  client en enrichissant le rapport avec vos clients.</p>
+      <p><a class="btn btn-primary" href="nos-offres" role="button">View details &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+      <h2> Opinion Analysis </h2>
+      <p>  Avec nos stratégies de Web campagne (réseaux sociaux, Web , équipe) et nos techniques d'analyse sémantique
+        améliorer vos stratégies politiques et mercatiques </p>
+      <p><a class="btn btn-primary" href="nos-offres" role="button">View details &raquo;</a></p>
+    </div>
+
+
+  </div>
+  </div>
+</div>
+
+</div>
+
+<div id="sec1" class="text-page">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-4">
+      <h2>  Service </h2>
+      <p>
+        <ul>
+             <p><li> Accompagnement fonctionnel Big Data et Mise en application </li></p>
+             <p><li> Collecte, stockage, aggrégation et traitement de données structuréees ou non </li></p>
+             <p><li> Etude et implémentation de modules analytiques</li></p>
+              <p><li> Dashboard et Dataviz : Suivi quotidien de KPI </li></p>
+              <p><li>  Etude de Sondage et Web Campagne </li></p>
+         </ul>
+      </p>
+     <!-- <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> > -->
+    </div>
+    <div class="col-lg-4">
+      <h2> Technologie </h2>
+      <p>
+        <ul>
+               <li>premier élément de la liste</li>
+               <li>deuxième élément de la liste</li>
+              <li>troisième élément de la liste</li>
+        </ul>
+      </p>
+     <!-- <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> -->
+    </div>
+     <div class="col-lg-4">
+      <h2> Secteurs d'activté </h2>
+
+        <ul>
+                <p><li> Banque, Assurance & Finance </li></p>
+                <p><li> Technologie & Opérateur Télécom </li></li></p>
+                <p><li> Retail </li></li></p>
+                <p><li> Automobile </li></li></p>
+                <p><li> Media, Local & Entertainment</li></li></p>
+        </ul>
+
+     <!-- <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p> -->
+    </div>
+  </div>
+  </div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+    {% block scripts %}
+    <script src="{% static 'site/js/site.js' %}"></script>
+    {% endblock scripts %}
+
+</div>
