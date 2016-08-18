@@ -150,13 +150,13 @@ USE_L10N = True
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = root('static_root')
 
-INSTALLED_APPS += ('storages',)
+"""INSTALLED_APPS += ('storages',)
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_ACCESS_KEY_ID = environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = environ['AWS_SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = 'yourbucketname'
 
-#--------------->
+#--------------->"""
 
 
 STATIC_URL = '/static/'

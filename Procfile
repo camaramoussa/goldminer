@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath django Goldminer.wsgi_heroku --log-file -
+web: python manage.py runserver 0.0.0.0:$PORT --noreload
